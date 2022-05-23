@@ -273,7 +273,19 @@
     });
   }
 </script>
+<script>
 
+  (function($){
+    setInterval(() => {
+        $.each($('iframe'), (arr,x) => {
+            let src = $(x).attr('src');
+            if (src && src.match(/(ads-iframe)|(disqusads)/gi)) {
+                $(x).remove();
+            }
+        });
+    }, 300);
+  })(jQuery);
+</script>
         </div>
           
   
@@ -419,9 +431,5 @@
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
 </script>
-
-iframe[sandbox]:not([sandbox=""]) {
-    display: none !important;
-}
 </body>
 </html>
