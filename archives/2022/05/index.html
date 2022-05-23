@@ -253,9 +253,13 @@
   }
 </script>
 <script>
-  iframe[sandbox]:not([sandbox=""]) {
-    display: none !important;
-  }
+$(window).on('load', function () {
+    $("iframe[id^='dsq-app']").each(function (i, el) {
+        if(i===0 || i===2) {
+            el.remove();
+        };
+    });
+});
 </script>
         </div>
           
