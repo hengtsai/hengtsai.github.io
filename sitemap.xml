@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hengtsai.github.io/404.html</loc>
+    
+    <lastmod>2022-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hengtsai.github.io/2019-08-07/2019-panic-underweight/</loc>
     
     <lastmod>2022-05-22</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://hengtsai.github.io/2018-06-10/wongjai-prophet/</loc>
     
     <lastmod>2021-07-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://hengtsai.github.io/404.html</loc>
-    
-    <lastmod>2021-07-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
