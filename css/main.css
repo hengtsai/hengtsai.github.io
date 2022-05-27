@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0694b4;
+  background: #7d0d09;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1843,6 +1843,9 @@ pre .javascript .function {
   .post-meta-item-text {
     display: none;
   }
+}
+iframe[sandbox]:not([sandbox=""]) {
+  display: none !important;
 }
 .post-nav {
   border-top: 1px solid #eee;
@@ -2663,4 +2666,7 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+div#disqus_thread iframe[sandbox] {
+  max-height: 0px !important;
 }
