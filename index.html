@@ -187,6 +187,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_tw">
+    <link itemprop="mainEntityOfPage" href="https://hengtsai.github.io/2022-06-12/diary-crontab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/yellow.jpg">
+      <meta itemprop="name" content="橫太哥">
+      <meta itemprop="description" content="很隨性 想到什麼就寫什麼">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="橫太哥隨筆">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022-06-12/diary-crontab/" class="post-title-link" itemprop="url">Crontab好猛好好用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-06-12 21:18:25" itemprop="dateCreated datePublished" datetime="2022-06-12T21:18:25+08:00">2022-06-12</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="firestore-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2022-06-12/diary-crontab/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022-06-12/diary-crontab/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前排程爬蟲，很粗暴的用Python while loop加上timer。電腦不能關，vscode不能關，改個程式也必須要中斷整個loop。</p>
+<p>原來unix-like的OS有個東西叫Crontab可以直接拿來當scheduler，連<code>.py</code>都可以直接執行。太方便啦！！可以做的事情實在太多了。多到我打算買一台iMac來掛著玩。</p>
+<ol>
+<li>公司填報表，沒填報表不能進公司大門唷。從明天開始這個就交給python幫我填了。</li>
+<li>爬蟲。需要重新把旺仔架構改一下，讓之後更新data不用reload整個database，這樣比較可以減緩SSD損耗。</li>
+</ol>
+<p>坐等iMac M2版本上市 ^o^</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_tw">
     <link itemprop="mainEntityOfPage" href="https://hengtsai.github.io/2022-06-10/markdown-image-space/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -246,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>自己架設靜態blog，全部都要自己搞。文章評論區、統計瀏覽次數，沒有即時易用的線上文章編輯器只能用markdwon、sitemap、連圖床也要自己找。好不容易找到了圖床之後，還要先上傳圖片，才能把圖片連結網址貼到markdwon上，才有圖文並茂的文章。光想想就很不人性化。這邊做一下筆記，記錄自己上網找的VScode plugin以及設定方法。以下是<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MaxfieldWalker.vscode-imgur">vscode-imgur</a>的Demo，看起來就很吸引人。</p>
+          <p>自己架設靜態blog，全部都要自己搞。文章評論區、統計瀏覽次數，沒有即時易用的線上文章編輯器只能用markdwon、sitemap、連圖床也要自己找。好不容易找到了圖床之後，還要先上傳圖片，才能把圖片連結網址貼到markdwon上，才有圖文並茂的文章。光想想就很不人性化。這邊做一下筆記，記錄自己上網找的VScode plugin以及設定方法。以下是<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=MaxfieldWalker.vscode-imgur">vscode-imgur</a>的demo，看起來就很吸引人。</p>
 <p><img src="https://res.cloudinary.com/hengtsai/image/upload/v1654860218/blog/2022-06-10-markdown-image-space-13f7bf21da71e9fb62056b04f18affcb0d8285acbcd918aa4fa308c67e0c2e5e.gif" alt="Demo">  </p>
           <!--noindex-->
             <div class="post-button">
@@ -958,94 +1043,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh_tw">
-    <link itemprop="mainEntityOfPage" href="https://hengtsai.github.io/2018-06-02/wongjai-helloworld/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/yellow.jpg">
-      <meta itemprop="name" content="橫太哥">
-      <meta itemprop="description" content="很隨性 想到什麼就寫什麼">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="橫太哥隨筆">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018-06-02/wongjai-helloworld/" class="post-title-link" itemprop="url">旺仔 Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-06-02 22:27:46" itemprop="dateCreated datePublished" datetime="2018-06-02T22:27:46+08:00">2018-06-02</time>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/2018-06-02/wongjai-helloworld/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018-06-02/wongjai-helloworld/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://res.cloudinary.com/hengtsai/image/upload/v1654085448/blog/2018-06-02-wongjai-helloworld-3b5849308fd2a9d9cff2576c23b284a7a128c423a23dcd6d91c53d9187f28572.jpg">  </p>
-<p>這個禮拜每天下班後寫到12點，隔天6點又爬起來寫，終於把 <strong>旺仔</strong> 生出來了！<br>簡單把投資模型丟進去回測：如果旺仔過年前有1000萬的話，現在過了三個半月之後會變成1150萬。<br>還有很多要做…</p>
-<ul>
-<li>旺仔只會看技術面，不會看基本面籌碼面</li>
-<li>旺仔算術很慢，剛剛從過年回測到現在花了20分鐘</li>
-<li>旺仔還不會畫trend chart和K線</li>
-<li>旺仔現在還不會賣股票 …XD</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -1111,14 +1113,14 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
