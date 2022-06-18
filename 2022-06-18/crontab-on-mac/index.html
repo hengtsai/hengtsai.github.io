@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://res.cloudinary.com/hengtsai/image/upload/v1655552604/blog/2022-06-18-crontab-on-mac-bb284b0ecfea08f13a574c7e9cae5569a3a85a1f7b32208347885213ec19c900.jpg">
 <meta property="article:published_time" content="2022-06-18T11:01:21.000Z">
-<meta property="article:modified_time" content="2022-06-18T11:58:52.056Z">
+<meta property="article:modified_time" content="2022-06-18T12:59:56.196Z">
 <meta property="article:author" content="橫太哥">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -254,15 +254,15 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">You have mail.</span><br></pre></td></tr></table></figure>
 <p>點進去看之後顯示：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/Library/Developer/CommandLineTools/usr/bin/python3: </span><br><span class="line">can&#x27;t open file &#x27;/Users/金城武/helloworld.py&#x27;: </span><br><span class="line">[Errno 1] Operation not permitted</span><br></pre></td></tr></table></figure>
-<p>這邊稍微記錄一下，我在Mac上使用Crontab所踩到的來，以及解決辦法。</p>
+<p>這邊稍微記錄一下，我在Mac上使用Crontab所踩到的雷，以及解決辦法。</p>
 <span id="more"></span>
 
 <h3 id="Mac系統隱私權開放"><a href="#Mac系統隱私權開放" class="headerlink" title="Mac系統隱私權開放"></a>Mac系統隱私權開放</h3><p>首先先確認環境設定沒問題。在terminal端執行python的時候，都很順利。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python helloworld.py</span><br></pre></td></tr></table></figure>
 <p>但是一樣的東西排進crontab時，卻總是不成功。看起來是有特別的權限限制了crontab使用，應該是Mac本身隱私權設定比較嚴格。去<code>設定-安全性與隱私權-完全存取磁碟</code>裡面，把<code>usr/sbin/cron</code>拉進去。給予他存取硬碟的權限，這樣crontab才可以找得到檔案。<br><img src="https://res.cloudinary.com/hengtsai/image/upload/v1655552604/blog/2022-06-18-crontab-on-mac-bb284b0ecfea08f13a574c7e9cae5569a3a85a1f7b32208347885213ec19c900.jpg" alt="Mac-Security-Setting">  </p>
 <h3 id="Python執行檔路徑"><a href="#Python執行檔路徑" class="headerlink" title="Python執行檔路徑"></a>Python執行檔路徑</h3><p>第二件事情，是python的執行路徑。有些人是透過anaconda來安裝python，有些人是透過pip來安裝。或是有些人兩個都裝。但是搭配的套件可能不一樣。這個時候你就要想辦法執行到你主要安裝套件的python，來指定給crontab去call out。一樣打開terminal，輸入<code>whereis python3</code>：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(base) 金城武@MacbookPro ~ % whereis python3</span><br><span class="line">python3: /usr/bin/python3 /Users/金城武/opt/anaconda3/share/man/man1/python3.1</span><br></pre></td></tr></table></figure>
-<p>可以看到python3會有兩個路徑，一個是在<code>bin</code>裡面，一個是在<code>anaconda</code>裡面，選取你安裝extionsion的那個即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(base) 金城武@MacbookPro ~ % whereis python3</span><br><span class="line">python3:</span><br><span class="line">/usr/bin/python3</span><br><span class="line">/Users/金城武/opt/anaconda3/share/man/man1/python3.1</span><br></pre></td></tr></table></figure>
+<p>可以看到python3會有兩個路徑，一個是在<code>bin/</code>裡面，一個是在<code>anaconda3/</code>裡面，選取你有安裝extionsion的那個即可。</p>
 <p>以上。</p>
 
     </div>
